@@ -7,19 +7,11 @@
       </ul>
 </template>
 
-//Options API
 
-<script>
-  export default {
-    data() {
-      return {
-        transactions: [
-          { id: 1, text: 'Flowers', amount: -19.99 },
-          { id: 2, text: 'Salary', amount: 300 },
-          { id: 3, text: 'Book', amount: -10 },
-          { id: 4, text: 'Camera', amount: 150 }
-        ]
-      }
-    }
-  }
+<script setup>
+  import { defineProps } from 'vue';
+
+  const props = defineProps({
+    transactions: Array
+  });
 </script>

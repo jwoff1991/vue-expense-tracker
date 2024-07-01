@@ -61,4 +61,14 @@ const generateUniqueId = () => {
   return Math.floor(Math.random() * 1000000);
 };
 
+
+const handleTransactionDeleted = (id) => {
+  transactions.value = transactions.value.filter(
+    (transaction) => transaction.id !== id
+  );
+
+  saveTransactionsToLocalStorage();
+
+  toast.success('Transaction deleted.');
+};
 </script>
